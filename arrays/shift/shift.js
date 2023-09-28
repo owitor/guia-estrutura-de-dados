@@ -1,16 +1,18 @@
-Array.prototype.dsShift = function () {
-    if (this.length === 0) {
-        return undefined;
+if (!Array.prototype.dsShift) {
+    Array.prototype.dsShift = function () {
+        if (this.length === 0) {
+            return undefined;
+        }
+
+        const firstElement = this[0];
+        for (let index = 0; index < this.length - 1; index++) {
+            this[index] = this[index + 1];
+        }
+
+        this.length--;
+
+        return firstElement;
     }
-
-    let firstElement = this[0]
-    for (let index = 0; index < this.length - 1; index++) {
-        this[index] = this[index + 1];
-    }
-
-    this.length--;
-
-    return firstElement;
 }
 
 

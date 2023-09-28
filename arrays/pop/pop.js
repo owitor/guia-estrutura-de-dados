@@ -1,13 +1,15 @@
-Array.prototype.dsPop = function () {
-    if (this.length === 0) {
-        return undefined;
+if (!Array.prototype.dsPop) {
+    Array.prototype.dsPop = function () {
+        if (this.length === 0) {
+            return undefined
+        }
+
+        const removedItem = this[this.length - 1];
+
+        this.length = this.length - 1
+
+        return removedItem;
     }
-
-    let removeItem = this[this.length - 1];
-    
-    this.length = this.length - 1
-
-    return removeItem;
 }
 
 let meuArray = [1, 2, 3, 4, 5];

@@ -44,7 +44,13 @@ Para sair da teoria, vamos implementar a função dsShift(), que simula o funcio
     - Por fim, o método retorna o valor do primeiro elemento removido, que foi armazenado na variável `firstElement`. Isso permite que o valor seja utilizado em outras partes do código.
 
 
-6. **Resultado final da implementação:**:
+6. **Verificação de Existência: Verifique se a função dsPop não existe no protótipo do Array antes de defini-la novamente. Isso evita a redefinição acidental de métodos.**
+
+   ```javascript
+    if (!Array.prototype.dsShift) {}
+   ```
+
+7. **Resultado final da implementação:**:
 
 ```javascript
 Array.prototype.dsShift = function () {

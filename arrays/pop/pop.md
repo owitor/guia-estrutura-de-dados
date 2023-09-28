@@ -21,7 +21,7 @@ Para sair da teoria, vamos implementar a função dsPop(), que simula o funciona
     - Se o array não estiver vazio, o método captura o último elemento utilizando:
     
         ```javascript
-        let removeItem = this[this.length - 1];
+        const removeItem = this[this.length - 1];
         ```
 
     - Isso significa que ele acessa o elemento no índice [this.length - 1], que é o último elemento do array.
@@ -37,12 +37,17 @@ Para sair da teoria, vamos implementar a função dsPop(), que simula o funciona
 4. **Retorno do Último Elemento Removido:**:
     - Finalmente, o método retorna o elemento que foi removido, que foi armazenado na variável removeItem.
 
+   ```javascript
+    return removedItem;
+   ```
+   
+5. **Verificação de Existência: Verifique se a função dsPop não existe no protótipo do Array antes de defini-la novamente. Isso evita a redefinição acidental de métodos.**
 
-        ```javascript
-        return removeItem;
-         ```
+   ```javascript
+    if (!Array.prototype.dsPop) {}
+   ```
 
-5. **Resultado final da implementação:**:
+6. **Resultado final da implementação:**:
 
     ```javascript
     Array.prototype.dsPop = function () {
@@ -51,11 +56,11 @@ Para sair da teoria, vamos implementar a função dsPop(), que simula o funciona
         return undefined;
     }
 
-    let removeItem = this[this.length - 1];
+    let removedItem = this[this.length - 1];
 
     this.length = this.length - 1
 
-    return removeItem;
+    return removedItem;
      ```
 
 
