@@ -1,0 +1,30 @@
+{
+  "name": "guia-estrutura-de-dados",
+  "version": "1.0.0",
+  "description": "Guia de estrutura de dados com javascript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baggiovictor/guia-estrutura-de-dados.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baggiovictor/guia-estrutura-de-dados/issues"
+  },
+  "homepage": "https://github.com/baggiovictor/guia-estrutura-de-dados#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "prettier": "3.0.3",
+    "vite": "^4.4.11"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
